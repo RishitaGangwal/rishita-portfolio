@@ -15,6 +15,7 @@ import {
 } from "@tabler/icons-react";
 import { BiLogoSpringBoot } from "react-icons/bi";
 import { FaGitAlt, FaGithub } from "react-icons/fa";
+import { SiTypescript } from "react-icons/si";
 import { SiPostman } from "react-icons/si";
 import { AnimatedTooltip } from "./ui/animated-tooltip"; // Import your AnimatedTooltip component
 
@@ -31,12 +32,12 @@ const skills = [
   },
   {
     id: 3,
-    name: "Javascript",
+    name: "JavaScript",
     icon: <IconBrandJavascript size={32} color="black" />,
   },
   {
     id: 4,
-    name: "Bootsrap",
+    name: "Bootstrap",
     icon: <IconBrandBootstrap size={32} color="black" />,
   },
   {
@@ -56,36 +57,41 @@ const skills = [
   },
   {
     id: 8,
+    name: "TypeScript",
+    icon: <SiTypescript size={25} color="black" />,
+  },
+  {
+    id: 9,
     name: "Framer Motion",
     icon: <IconBrandFramerMotion size={32} color="black" />,
   },
   {
-    id: 9,
-    name: "Spingboot",
+    id: 10,
+    name: "Spring Boot",
     icon: <BiLogoSpringBoot size={32} color="black" />,
   },
-   {
-    id: 10,
+  {
+    id: 11,
     name: "MySQL",
     icon: <IconBrandMysql size={32} color="black" />,
   },
   {
-    id: 11,
+    id: 12,
     name: "Firebase",
     icon: <IconBrandFirebase size={32} color="black" />,
   },
   {
-    id: 12,
+    id: 13,
     name: "Git",
     icon: <FaGitAlt size={32} color="black" />,
   },
   {
-    id: 13,
+    id: 14,
     name: "GitHub",
     icon: <FaGithub size={32} color="black" />,
   },
   {
-    id: 14,
+    id: 15,
     name: "Postman",
     icon: <SiPostman size={32} color="black" />,
   },
@@ -101,7 +107,7 @@ export function SkillsSection() {
       <div className="my-4">
         {/* <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" /> */}
 
-        <div className="mt-[2rem] ml-[8rem] flex gap-4 items-center">
+        <div className="mt-[2rem] ml-[6rem] flex gap-4 items-center">
           {skills.slice(0, 7).map(skill => (
             <div key={skill.id} className="relative group">
               <AnimatedTooltip
@@ -116,7 +122,7 @@ export function SkillsSection() {
           ))}
         </div>
 
-        <div className="mt-[3rem] ml-[10rem] flex gap-4 items-center">
+        <div className="mt-[4rem] ml-[8rem] flex gap-4 items-center">
           {skills.slice(7, 13).map(skill => (
             <div key={skill.id} className="relative group">
               <AnimatedTooltip

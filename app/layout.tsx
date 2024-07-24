@@ -10,7 +10,7 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "R",
+  title: "Rishita Gangwal",
   description: "My Portfolio",
 };
 
