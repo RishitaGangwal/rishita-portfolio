@@ -11,7 +11,7 @@ import {
   IconBrandNextjs,
   IconBrandFramerMotion,
   IconBrandFirebase,
-  IconBrandMysql
+  IconBrandMysql,
 } from "@tabler/icons-react";
 import { BiLogoSpringBoot } from "react-icons/bi";
 import { FaGitAlt, FaGithub } from "react-icons/fa";
@@ -100,44 +100,104 @@ const skills = [
 export function SkillsSection() {
   return (
     <div className="max-w-md w-full p-4 md:p-8 bg-white dark:bg-black flex-col justify-center items-center">
-      {/* <p className="text-neutral-600 text-lg dark:text-neutral-300 w-full whitespace-nowrap ">
-        Here are some of the technologies and skills I excel in:
-      </p> */}
-
-      <div className="my-4">
-        {/* <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" /> */}
-
-        <div className="mt-[2rem] ml-[6rem] flex gap-4 items-center">
-          {skills.slice(0, 7).map(skill => (
-            <div key={skill.id} className="relative group">
-              <AnimatedTooltip
-                items={[{
-                  id: skill.id,
-                  name: "",
-                  designation: skill.name,
-                  icon: skill.icon,
-                }]}
-              />
+      <div className="md:my-4 flex flex-col sm:flex-col md:flex-row gap-4">
+        <div className="flex flex-col sm:flex-wrap md:flex-nowrap gap-4">
+        {/* mobile slice */}
+          <div className="block md:hidden ml-2 space-y-16">
+            {/* First group: 8 items on md, 5 items on sm */}
+            <div className="flex mt-[2rem] gap-2 items-center">
+              {skills.slice(0, 5).map((skill) => (
+                <div key={skill.id} className="relative group">
+                  <AnimatedTooltip
+                    items={[
+                      {
+                        id: skill.id,
+                        name: "",
+                        designation: skill.name,
+                        icon: skill.icon,
+                      },
+                    ]}
+                  />
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
 
-        <div className="mt-[4rem] ml-[8rem] flex gap-4 items-center">
-          {skills.slice(7, 13).map(skill => (
-            <div key={skill.id} className="relative group">
-              <AnimatedTooltip
-                items={[{
-                  id: skill.id,
-                  name: "",
-                  designation: skill.name,
-                  icon: skill.icon,
-                }]}
-              />
+            {/* Second group: 8 items on md, 5 items on sm */}
+            <div className="flex mt-[2rem] gap-2 items-center">
+              {skills.slice(5, 10).map((skill) => (
+                <div key={skill.id} className="relative group">
+                  <AnimatedTooltip
+                    items={[
+                      {
+                        id: skill.id,
+                        name: "",
+                        designation: skill.name,
+                        icon: skill.icon,
+                      },
+                    ]}
+                  />
+                </div>
+              ))}
             </div>
-          ))}
+
+            {/* Third group: remaining items on sm */}
+            <div className="flex mt-[2rem] gap-2 items-center">
+              {skills.slice(10, 15).map((skill) => (
+                <div key={skill.id} className="relative group">
+                  <AnimatedTooltip
+                    items={[
+                      {
+                        id: skill.id,
+                        name: "",
+                        designation: skill.name,
+                        icon: skill.icon,
+                      },
+                    ]}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+          {/* dekstop slice */}
+          <div className="md:block hidden flex justify-center items-center">
+            {/* First group: 8 items on md */}
+            <div className="flex flex-wrap md:flex-nowrap mt-[2rem] ml-[5rem] gap-4 items-center">
+              {skills.slice(0, 8).map((skill) => (
+                <div key={skill.id} className="relative group">
+                  <AnimatedTooltip
+                    items={[
+                      {
+                        id: skill.id,
+                        name: "",
+                        designation: skill.name,
+                        icon: skill.icon,
+                      },
+                    ]}
+                  />
+                </div>
+              ))}
+            </div>
+
+            {/* Second group: 7 items on md */}
+            <div className="flex flex-wrap md:flex-nowrap mt-[4rem] ml-[7rem] gap-4 items-center">
+              {skills.slice(8, 15).map((skill) => (
+                <div key={skill.id} className="relative group">
+                  <AnimatedTooltip
+                    items={[
+                      {
+                        id: skill.id,
+                        name: "",
+                        designation: skill.name,
+                        icon: skill.icon,
+                      },
+                    ]}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
-
     </div>
   );
 }

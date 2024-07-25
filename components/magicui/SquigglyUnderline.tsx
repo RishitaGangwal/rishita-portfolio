@@ -11,11 +11,13 @@ const navigation = [
   { name: "Contact", href: "#contact" },
 ];
 
+// https://github.com/dillionverma/portfolio-template
+
 export const SquigglyUnderline = () => {
   const [selectedLink, setSelectedLink] = useState("Home");
 
   return (
-    <div className="flex gap-10 justify-center items-center sticky top-0 w-full h-[64px] backdrop-filter backdrop-blur-[5px] border-b-[1px] px-4 sm:px-[100px] z-50 border-[rgba(255,_255,_255,_.15)] pb-8 bg-[rgba(255,_255,_255,_.50)] transition-colors duration-300">
+    <div className="flex gap-10 justify-center items-center md:sticky sticky top-0 w-full h-[64px] backdrop-filter backdrop-blur-[5px] border-b-[1px] px-4 sm:px-[100px] z-50 border-[rgba(255,_255,_255,_.15)] pb-8 bg-[rgba(255,_255,_255,_.50)] transition-colors duration-300">
       {navigation.map((item) => {
         const isSelected = item.name === selectedLink;
         return (

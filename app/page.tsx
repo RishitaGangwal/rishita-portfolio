@@ -27,19 +27,19 @@ import {
   Youtube,
 } from "lucide-react";
 import Link from "next/link";
-import Image from 'next/image';
+import Image from "next/image";
 import profile from "../public/Me.jpg";
 import { FaEnvelope } from "react-icons/fa";
 import { GoArrowUpRight } from "react-icons/go";
 import { IoMail } from "react-icons/io5";
-import { FaRegCopy } from 'react-icons/fa';
+import { FaRegCopy } from "react-icons/fa";
 
- const email = 'rishitagangwal.work@gmail.com';
+const email = "rishitagangwal.work@gmail.com";
 
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText(email);
-    alert('Email copied to clipboard!');
-  };
+const copyToClipboard = () => {
+  navigator.clipboard.writeText(email);
+  alert("Email copied to clipboard!");
+};
 
 const contact = {
   email: "rishitagangwal5@gmail.com",
@@ -139,16 +139,16 @@ const projects = [
 
 export default function Component() {
   return (
-    <main className="flex flex-col min-h-[150dvh]">
+    <main className="flex flex-col min-h-[150dvh] ">
       <SquigglyUnderline />
-      <section className="w-full py-12 md:py-24 lg:py-12 ">
-        <div className="container px-4 md:px-6 grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px] ml-[6rem] mb-7">
-          <div className="mt-[5rem] flex flex-col justify-center space-y-4 ml-[17rem]">
+      <section className="md:w-full w-[300px] py-2 md:py-24 lg:py-12 ">
+        <div className="container px-1 md:px-6 grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px] md:ml-[6rem] ml-[2rem] mb-7">
+          <div className="mt-[5rem] flex flex-col justify-center space-y-4 md:ml-[17rem] ">
             <div className="space-y-2">
-              <h1 className="text-md font-semibold tracking-tight sm:text-55l xl:text-5xl/none mb-7 font-sans">
+              <h1 className="text-md font-semibold tracking-tight sm:text-55l xl:text-5xl/none md:mb-7 mb-4 font-poppins">
                 Hi, I&apos;m Rishita👋
               </h1>
-              <span className="mt-[5rem] max-w-[600px] md:text-xl">
+              <span className="mt-[5rem] md:w-[600px] w-[20px] md:text-xl ">
                 A dedicated frontend developer focused on engaging user
                 interface.
               </span>
@@ -209,7 +209,7 @@ export default function Component() {
               ))}
             </div>
           </div>
-          <div className="ml-10">
+          <div className="md:ml-10 ml-7">
             <Image
               src={profile}
               alt="Profile"
@@ -228,87 +228,89 @@ export default function Component() {
 
       <section className="w-full">
         <div className="container grid md:items-center justify-center gap-4 text-center relative ">
-          <div className="relative z-10">
-            <h2 className="mr-[42rem] tracking-normal md:text-4xl/tight font-poppins font-semibold opacity-90">
+          <div className="relative z-10 ">
+            <h2 className="md:mr-[42rem]  text-4xl tracking-normal md:text-4xl/tight font-poppins font-semibold opacity-90">
               About Me
             </h2>
-            <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-4 h-[2px] w-[10rem] " />
-            <div className="max-w-[500px] md:text-md mr-[20rem] justify-center items-center">
-              <p className="mt-[2rem]  text-justify">
-                Hi there! I’m an MCA student from SGSITS, Indore, passionate
-                about transforming complex ideas into intuitive, user-friendly
-                applications. I love diving into new projects and bringing
-                fresh, creative solutions to the table. 🚀
-              </p>
-              <br></br>
-              <p className="text-justify">
-                What exciting projects are you working on? How can I help you
-                achieve your biggest goals? Let’s connect and create something
-                remarkable together!✨
-              </p>
-              <br></br>
-              <p className="text-justify">
-                I’m excited to explore how my skills and enthusiasm can add
-                value to your team. Let’s make great things happen!
-              </p>
-            </div>
-            <div className="absolute top-0 left-0 ml-[20rem] h-[400px] w-full max-w-full flex items-center justify-center overflow-hidden rounded-lg">
-              <OrbitingCircles
-                className="h-[30px] w-[30px] border-none bg-transparent"
-                duration={20}
-                delay={14}
-                radius={80}
-              >
-                <Icons.nextjs className="w-8 h-8" />
-              </OrbitingCircles>
-              <OrbitingCircles
-                className="h-[30px] w-[30px] border-none bg-transparent"
-                duration={20}
-                delay={7}
-                radius={80}
-              >
-                <Icons.react className="w-8 h-8" />
-              </OrbitingCircles>
-              <OrbitingCircles
-                className="h-[50px] w-[50px] border-none bg-transparent"
-                reverse
-                radius={160}
-                duration={20}
-              >
-                <Icons.framermotion className="w-8 h-8" />
-              </OrbitingCircles>
-              <OrbitingCircles
-                className="h-[50px] w-[50px] border-none bg-transparent"
-                reverse
-                radius={160}
-                duration={20}
-                delay={20}
-              >
-                <Icons.gitHub className="w-8 h-8" />
-              </OrbitingCircles>
-              <OrbitingCircles
-                className="h-[50px] w-[50px] border-none bg-transparent"
-                reverse
-                radius={120}
-                duration={10}
-              >
-                <Icons.tailwindcss className="w-8 h-8" />
-              </OrbitingCircles>
+            <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-4 h-[2px] md:w-[10rem] " />
+            <div className="md:flex flex-col">
+              <div className="md:max-w-[500px] max-w-[350px] md:text-md md:mr-[20rem] md:ml-0 ml-[2rem] justify-center items-center">
+                <p className="mt-[2rem]  text-justify">
+                  Hi there! I’m an MCA student from SGSITS, Indore, passionate
+                  about transforming complex ideas into intuitive, user-friendly
+                  applications. I love diving into new projects and bringing
+                  fresh, creative solutions to the table. 🚀
+                </p>
+                <br></br>
+                <p className="text-justify">
+                  What exciting projects are you working on? How can I help you
+                  achieve your biggest goals? Let’s connect and create something
+                  remarkable together!✨
+                </p>
+                <br></br>
+                <p className="text-justify">
+                  I’m excited to explore how my skills and enthusiasm can add
+                  value to your team. Let’s make great things happen!
+                </p>
+              </div>
+              <div className="absolute md:top-0 md:left-0 md:ml-[20rem] h-[400px] w-full max-w-full flex items-center justify-center overflow-hidden rounded-lg md:mt-0 mt-[1rem]">
+                <OrbitingCircles
+                  className="h-[30px] w-[30px] border-none bg-transparent"
+                  duration={20}
+                  delay={14}
+                  radius={80}
+                >
+                  <Icons.nextjs className="w-8 h-8" />
+                </OrbitingCircles>
+                <OrbitingCircles
+                  className="h-[30px] w-[30px] border-none bg-transparent"
+                  duration={20}
+                  delay={7}
+                  radius={80}
+                >
+                  <Icons.react className="w-8 h-8" />
+                </OrbitingCircles>
+                <OrbitingCircles
+                  className="h-[50px] w-[50px] border-none bg-transparent"
+                  reverse
+                  radius={160}
+                  duration={20}
+                >
+                  <Icons.framermotion className="w-8 h-8" />
+                </OrbitingCircles>
+                <OrbitingCircles
+                  className="h-[50px] w-[50px] border-none bg-transparent"
+                  reverse
+                  radius={160}
+                  duration={20}
+                  delay={20}
+                >
+                  <Icons.gitHub className="w-8 h-8" />
+                </OrbitingCircles>
+                <OrbitingCircles
+                  className="h-[50px] w-[50px] border-none bg-transparent"
+                  reverse
+                  radius={120}
+                  duration={10}
+                >
+                  <Icons.tailwindcss className="w-8 h-8" />
+                </OrbitingCircles>
+              </div>
             </div>
           </div>
 
-          <div className="space-y-3 relative z-10 ">
-            <h2 className="mt-[6rem] mb-[1rem] tracking-normal font-poppins font-semibold opacity-90 text-4xl">
+          <div className="space-y-3 relative z-10 md:w-full w-[400px] md:ml-0 md:mt-0 mt-[20rem]">
+            <h2 className="mt-[6rem] mb-[1rem] tracking-normal font-poppins font-semibold opacity-90 md:text-4xl text-2xl">
               Tech Stack Highlights
             </h2>
-            <p className="text-neutral-600 text-lg dark:text-neutral-300 w-full whitespace-nowrap ">
+            <p className="text-neutral-600 text-lg dark:text-neutral-300 md:w-full w-[300px] md:ml-0 ml-[3rem] md:whitespace-nowrap ">
               Here are some of the technologies and skills I excel in:
             </p>
-            <div className="ml-[10rem] bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent h-[2px] w-[35rem]" />
-          </div>
-          <SkillsSection />
+            <div className="md:ml-[10rem] bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent h-[2px] md:w-[35rem]" />
+            <SkillsSection />
 
-          <FlipWordsDemo />
+            <FlipWordsDemo />
+          </div>
         </div>
       </section>
 
@@ -318,16 +320,16 @@ export default function Component() {
       />
 
       <section className="w-full">
-        <div className="container  px-5 md:px-6 mr-[20rem]">
+        <div className="container px-6 mx-auto">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div>
-              <h2 className="mr-[20rem] text-4xl tracking-tight font-playfairdisplay font-semiboldfont-poppins font-semibold opacity-90 ">
+            <div className="max-w-md mx-auto">
+              <h2 className="text-4xl tracking-tight font-poppins font-semibold opacity-90">
                 Check out my latest work
               </h2>
-              <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[2px] w-[24rem] mb-[4rem]" />
+              <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[2px] w-full mb-16" />
             </div>
           </div>
-          <div className="mr-[240px] grid grid-cols-1 gap-20 md:grid-cols-2 max-w-[800px] mx-auto">
+          <div className="grid grid-cols-1 gap-20 md:grid-cols-2 max-w-[800px] mx-auto">
             {projects.map((project, id) => (
               <ProjectCard
                 key={project.title}
@@ -342,6 +344,7 @@ export default function Component() {
           </div>
         </div>
       </section>
+
       <hr className="h-px my-[6rem] bg-gray-300 border-0 dark:bg-gray-700 w-[60%] mx-auto" />
       <section className="w-full " id="contact">
         <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
