@@ -1,4 +1,5 @@
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
@@ -30,6 +31,7 @@ export default function RootLayout({
       >
         <TooltipProvider>{children}</TooltipProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
