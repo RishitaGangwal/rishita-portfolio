@@ -155,7 +155,7 @@ export default function Component() {
             </div>
             <div className="">
               <Link
-                href="https://drive.google.com/file/d/1k-4L6YJukCEfpagKL-J9lQvnch70euc7/view?usp=sharing"
+                href="https://drive.google.com/file/d/1351YW2RPi8ugIul25Oka4ZWCV0C_zqRs/view?usp=sharing"
                 target="blank"
                 className={cn(
                   buttonVariants({
@@ -380,6 +380,7 @@ export default function Component() {
             <div className="ml-[2rem] mt-5 flex items-center space-x-4 text-md">
               <a
                 href="https://github.com/RishitaGangwal"
+                target="blank"
                 className="flex items-center space-x-2 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg p-2 transition-colors duration-300"
               >
                 <span>GitHub</span>
