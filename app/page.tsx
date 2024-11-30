@@ -155,7 +155,7 @@ export default function Component() {
             </div>
             <div className="">
               <Link
-                href="https://drive.google.com/file/d/1351YW2RPi8ugIul25Oka4ZWCV0C_zqRs/view?usp=sharing"
+                href="https://drive.google.com/file/d/1GhS5vHuIPsXot_JNzEWRoWi5SAa3bzHD/view?usp=sharing"
                 target="blank"
                 className={cn(
                   buttonVariants({
